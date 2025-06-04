@@ -1,0 +1,62 @@
+.crew-container {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.crew-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.crew-header h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.crew-header p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.crew-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.crew-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.crew-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.crew-title {
+  font-style: italic;
+  color: #aaa;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.crew-description {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.crew-image {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 16px;
+  object-fit: cover;
+}
