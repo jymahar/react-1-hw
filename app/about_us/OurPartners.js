@@ -7,8 +7,8 @@ const partners = [
   { name: "CBC", logo: "/business_partners/CBC_Logo_White.png" },
   { name: "Alphabet", logo: "/business_partners/alphabet-logo.png" },
   { name: "Nyu", logo: "/business_partners/nyu-logo.png" },
-  { name: "Queens", logo: "business_partners/QueensLogo_white.png" },
-  { name: "Sodexo", logo: "business_partners/Sodexo-logo.png" },
+  { name: "Queens", logo: "/business_partners/QueensLogo_white.png" },
+  { name: "Sodexo", logo: "/business_partners/Sodexo-logo.png" },
 ];
 
 const OurPartners = () => {

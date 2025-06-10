@@ -27,8 +27,8 @@ const OurValues = () => {
   return (
     <div className="values-section">
       <div className="values-grid">
-        {values.map((value) => (
-          <div className="value-item">
+        {values.map((value, index) => (
+          <div className="value-item" key={index}>
             <h3 className="value-title">{value.title}</h3>
             <p className="value-description">{value.description}</p>
             <hr />
