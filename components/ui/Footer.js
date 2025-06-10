@@ -2,6 +2,26 @@
 
 import { usePathname } from "next/navigation";
 import styles from "./Footer.module.css";
+import SocialMediaItem from "./SocialMediaItem";
+import Link from "next/link";
+
+const socialMedia = [
+  {
+    title: "Facebook",
+    icon: "/social_media/facebook.png",
+    url: "https://facebook.com",
+  },
+  {
+    title: "LinkedIn",
+    icon: "/social_media/linkedin.png",
+    url: "https://www.linkedin.com",
+  },
+  {
+    title: "Instagram",
+    icon: "/social_media/instagram.png",
+    url: "https://www.instagram.com",
+  },
+];
 
 export const Footer = () => {
   const path = usePathname().split("?")[0];
@@ -18,35 +38,34 @@ export const Footer = () => {
       {/* TASK - React 1 week 2 */}
       {/* Create a new List for the Pages */}
       {/* We need to use the <Link /> component here */}
-      {/* <div className={styles.pages}>
+      <div className={styles.pages}>
         <h3>Pages</h3>
         <ul>
-          <li> <Link/> </li>
-          ...
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/about_us">About Us</Link>
+          </li>
+          <li>
+            <Link href="/destination">Destination</Link>
+          </li>
+          <li>
+            <Link href="/nasa_collaboration">Nasa Collabration</Link>
+          </li>
         </ul>
-      </div> */}
-      {/* Docs for the Link: https://nextjs.org/docs/pages/api-reference/components/link */}
-
-      {/* TASK - React 1 week 1 */}
-      {/* Add a new list item for LINKEDIN */}
+      </div>
       <div className={styles.footerLinks}>
         <h3>Follow us</h3>
         <ul className={styles.footerList}>
-          <li>
-            <a href="https://facebook.com">Facebook</a>
-          </li>
-          <li>
-            <a href="https://instagram.com">Instagram</a>
-          </li>
-          <li>
-            <a href="https://tiktok.com">Tiktok</a>
-          </li>
-          <li>
-            <a href="https://google.com">On the streets at night</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/">LinkedIn</a>
-          </li>
+          {socialMedia.map((link, index) => (
+            <SocialMediaItem
+              key={index}
+              url={link.url}
+              title={link.title}
+              icon={link.icon}
+            />
+          ))}
           {/* TASK - React 1 week 2 */}
           {/* Create a <SocialMediaItem /> component and replace all of the list items! */}
           {/* it should accept the following props */}
