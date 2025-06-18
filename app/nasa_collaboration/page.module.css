@@ -4,9 +4,16 @@
   height: 100vh;
 }
 
-
 .nasaPicOfTheDayImg {
   width: auto;
   height: 400px;
+}
 
+.nasaContainer {
+  display: flex;
+}
+
+.nasaContainer p {
+  display: flex;
+  margin-left: 10px;
 }
